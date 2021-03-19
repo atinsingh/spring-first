@@ -7,7 +7,7 @@ public class Person {
     private String name;
     private List<String> hobbies;
     private int age;
-    private Map<String, String> addressMap;
+    private Map<String, Address> addressMap;
 
     public String getName() {
         return name;
@@ -33,11 +33,21 @@ public class Person {
         this.age = age;
     }
 
-    public Map<String, String> getAddressMap() {
+    public Map<String, Address> getAddressMap() {
         return addressMap;
     }
 
-    public void setAddressMap(Map<String, String> addressMap) {
+    public void setAddressMap(Map<String, Address> addressMap) {
         this.addressMap = addressMap;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", hobbies=" + hobbies +
+                ", age=" + age +
+                ", addressMap=" + addressMap +
+                '}';
     }
 }

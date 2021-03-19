@@ -15,4 +15,22 @@
         <constructor-arg name="engine" ref="petrolEngine"></constructor-arg>
     </bean>
 
+    <bean name="person" class="io.pragra.learning.springfirst.domain.Person">
+        <property name="name" value="Navleen"></property>
+        <property name="age" value="23"></property>
+        <property name="hobbies">
+            <list>
+                <value>Reading</value>
+                <value>Travelling</value>
+                <value>Music</value>
+            </list>
+        </property>
+        <property name="addressMap">
+            <map>
+                <entry key="home" value="Brampton"></entry>
+                <entry key="office" value="Mississauga"></entry>
+            </map>
+        </property>
+    </bean>
+
 </beans>
