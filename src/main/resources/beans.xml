@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="petrolEngine" name="petrolEngine" class="io.pragra.learning.springfirst.domain.PetrolEngine">
+        <constructor-arg name="engineType" value="VT9"></constructor-arg>
+    </bean>
+    <bean id="dieselEngine" name="dieselEngine" class="io.pragra.learning.springfirst.domain.DieselEngine">
+        <constructor-arg name="engineType" value="Diesel Engine"></constructor-arg>
+    </bean>
+    <bean name="car" class="io.pragra.learning.springfirst.domain.Car">
+        <constructor-arg name="make" value="Toyota"></constructor-arg>
+        <constructor-arg name="engine" ref="petrolEngine"></constructor-arg>
+    </bean>
+
+</beans>
