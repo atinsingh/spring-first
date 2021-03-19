@@ -15,6 +15,16 @@
         <constructor-arg name="engine" ref="petrolEngine"></constructor-arg>
     </bean>
 
+    <bean name="address" class="io.pragra.learning.springfirst.domain.Address">
+        <constructor-arg name="addresstype" value="city"></constructor-arg>
+        <constructor-arg name="location" value="Brampton"></constructor-arg>
+    </bean>
+
+    <bean name="address1" class="io.pragra.learning.springfirst.domain.Address">
+        <constructor-arg name="addresstype" value="city"></constructor-arg>
+        <constructor-arg name="location" value="Brampton"></constructor-arg>
+    </bean>
+
     <bean name="person" class="io.pragra.learning.springfirst.domain.Person">
         <property name="name" value="Navleen"></property>
         <property name="age" value="23"></property>
@@ -27,8 +37,9 @@
         </property>
         <property name="addressMap">
             <map>
-                <entry key="home" value="Brampton"></entry>
-                <entry key="office" value="Mississauga"></entry>
+                <entry key="home" value-ref="address"></entry>
+                <entry key="home" value-ref="address1"></entry>
+
             </map>
         </property>
     </bean>
