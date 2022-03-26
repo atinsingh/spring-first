@@ -40,4 +40,14 @@ public class Person {
     public void setAddressMap(Map<String, Address> addressMap) {
         this.addressMap = addressMap;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", hobbies=" + hobbies +
+                ", age=" + age +
+                ", addressMap=" + addressMap +
+                '}';
+    }
 }

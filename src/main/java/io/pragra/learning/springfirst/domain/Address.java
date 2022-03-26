@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package io.pragra.learning.springfirst.domain;
 
 public class Address {
@@ -29,3 +30,11 @@ public class Address {
     }
 }
 
+=======
+package io.pragra.learning.springfirst.domain;
+
+public class Address {
+    private String type;
+    private String location;
+}
+>>>>>>> 35c2f0eddbbaebf4e57fdcd88e4e9d7397df58bf
