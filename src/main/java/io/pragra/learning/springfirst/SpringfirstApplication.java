@@ -2,6 +2,7 @@ package io.pragra.learning.springfirst;
 
 import io.pragra.learning.springfirst.domain.Car;
 import io.pragra.learning.springfirst.domain.DieselEngine;
+import io.pragra.learning.springfirst.domain.Person;
 import io.pragra.learning.springfirst.domain.PetrolEngine;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,8 +22,10 @@ public class SpringfirstApplication {
 
 		 Car car = context.getBean("car", Car.class);
 
+		Person person = context.getBean(Person.class);
 
-		System.out.println(car);
+		System.out.println(person);
+
 
 	}
 
