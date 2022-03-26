@@ -14,5 +14,28 @@
         <constructor-arg name="make" value="Toyota"></constructor-arg>
         <constructor-arg name="engine" ref="petrolEngine"></constructor-arg>
     </bean>
-
+    <bean id="Person" class="io.pragra.learning.springfirst.domain.Person">
+        <property name="name" value="Jegan"/>
+        <property name="age" value="25"/>
+        <property name="hobbies">
+            <list>
+                <value>"Play"</value>
+                <value>"Sing"</value>
+            </list>
+        </property>
+        <property name="addressMap">
+            <map>
+                <entry key="Jegan" value-ref="Jeganaddress"/>
+                <entry key="Kumar" value-ref="kumaraddress"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="Jeganaddress" class="io.pragra.learning.springfirst.domain.Address">
+        <property name="type" value="Home"/>
+        <property name="location" value="Guelph"/>
+    </bean>
+    <bean id="kumaraddress" class="io.pragra.learning.springfirst.domain.Address">
+        <property name="type" value="Home"/>
+        <property name="location" value="Missaga"/>
+    </bean>
 </beans>
