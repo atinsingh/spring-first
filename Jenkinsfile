@@ -2,6 +2,11 @@ pipeline {
     agent {
         label 'aws'
     }
+    environment {
+        JAVA_HOME= "${tool 'jdk11'}"
+        RUN_MODE = "dev"
+        USER_NAME = "ATIN"
+    }
     triggers {
       pollSCM '* * * * *'   
     }
@@ -15,11 +20,7 @@ pipeline {
         maven 'maven3'
         git 'Default'
     }
-     environment {
-        JAVA_HOME= "${tool 'jdk11'}"
-        RUN_MODE = "dev"
-        USER_NAME = "ATIN"
-    }
+ 
 
 
     stages {
