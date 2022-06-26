@@ -6,11 +6,6 @@ pipeline {
       pollSCM '* * * * *'   
     }
 
-    environment {
-        JAVA_HOME= tools 'jdk11'
-        RUN_MODE = "dev"
-        USER_NAME = "ATIN"
-    }
     options {
          buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '3')
         timeout(time: 60, unit: 'SECONDS')
@@ -19,6 +14,11 @@ pipeline {
         jdk 'jdk11'
         maven 'maven3'
         git 'Default'
+    }
+     environment {
+        JAVA_HOME= "${tool 'jdk11'}"
+        RUN_MODE = "dev"
+        USER_NAME = "ATIN"
     }
 
 
