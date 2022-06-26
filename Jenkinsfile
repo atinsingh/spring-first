@@ -26,6 +26,7 @@ pipeline {
         stage('CLEAN UP') {
             steps {
                  cleanWs()
+                 sh 'printenv'
             }
            
         }
