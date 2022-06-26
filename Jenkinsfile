@@ -38,17 +38,26 @@ pipeline {
         }
 
         stage('Compile') {
+             environment {
+                JAVA_HOME= "${tool 'jdk11'}"
+             }
             steps {
                 sh 'mvn compile'
             }
         }
 
         stage('Test') {
+             environment {
+                JAVA_HOME= "${tool 'jdk11'}"
+             }
             steps {
                 sh 'mvn test'
             }
         }
         stage('Package') {
+             environment {
+                JAVA_HOME= "${tool 'jdk11'}"
+             }
             steps {
                 sh 'mvn package'
             }
