@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'aws'
+        label 'main'
     }
     environment {
         JAVA_HOME= "${tool 'jdk11'}"
