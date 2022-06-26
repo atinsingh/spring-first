@@ -7,6 +7,7 @@ pipeline {
     }
 
     environment {
+        JAVA_HOME= tools 'jdk11'
         RUN_MODE = "dev"
         USER_NAME = "ATIN"
     }
