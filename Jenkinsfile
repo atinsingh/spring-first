@@ -12,7 +12,7 @@ pipeline {
     }
     options {
          buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '3')
-        timeout(time: 30, unit: 'SECONDS')
+        timeout(time: 60, unit: 'SECONDS')
     }
     tools {
         jdk 'jdk11'
@@ -48,6 +48,11 @@ pipeline {
         stage('Package') {
             steps {
                 sh 'mvn package'
+            }
+        }
+        stage('Publish Result') {
+            steps {
+                junit 'target/**/*.xml'
             }
         }
 
