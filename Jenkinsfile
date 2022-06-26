@@ -2,6 +2,10 @@ pipeline {
     agent {
         label 'main'
     }
+    triggers {
+      pollSCM '* * * * *'   
+    }
+
     environment {
         RUN_MODE = "dev"
         USER_NAME = "ATIN"
@@ -46,7 +50,7 @@ pipeline {
                 sh 'mvn package'
             }
         }
-        
+
     }
 
     post {
